@@ -329,12 +329,12 @@ class TicketController extends Controller
 //             Mail::send(array('html' => 'emails.ticket_re-reply'), ['content' => $reply_content, 'ticket_number' => $ticket_number, 'From' => $company, 'name' => $username, 'Agent_Signature' => $agentsign], function ($message) use ($email, $user_name, $ticket_number, $ticket_subject, $check_attachment) {
 //                 $message->to($email, $user_name)->subject($ticket_subject . '[#' . $ticket_number . ']');
 //                 // if(isset($attachments)){
-// //                if ($check_attachment == 1) {
-// //                    $size = count($attach);
-// //                    for ($i = 0; $i < $size; $i++) {
-// //                        $message->attach($attachments[$i]->getRealPath(), ['as' => $attachments[$i]->getClientOriginalName(), 'mime' => $attachments[$i]->getClientOriginalExtension()]);
-// //                    }
-// //                }
+            // //                if ($check_attachment == 1) {
+            // //                    $size = count($attach);
+            // //                    for ($i = 0; $i < $size; $i++) {
+            // //                        $message->attach($attachments[$i]->getRealPath(), ['as' => $attachments[$i]->getClientOriginalName(), 'mime' => $attachments[$i]->getClientOriginalExtension()]);
+            // //                    }
+            // //                }
 //             }, true);
             //dd('reply');
             /*
@@ -345,7 +345,7 @@ class TicketController extends Controller
                 $re = $this->PhpMailController->sendmail($from = $this->PhpMailController->mailfrom('0', $tickets->dept_id), $to = ['name' => $user_name, 'email' => $email], $message = ['subject' => $eventthread->title, 'scenario' => 'create-ticket-by-agent', 'body' => $thread->body], $template_variables = ['agent_sign' => Auth::user()->agent_sign, 'ticket_number' => $tickets->number]);
                 //dd($re);
             } catch (\Exception $e) {
-                throw new \Exception($e->getMessage());
+                //throw new \Exception($e->getMessage());
             }
 
             $collaborators = Ticket_Collaborator::where('ticket_id', '=', $ticket_id)->get();
@@ -361,12 +361,12 @@ class TicketController extends Controller
                 }
 //                 Mail::send('emails.ticket_re-reply', ['content' => $reply_content, 'ticket_number' => $ticket_number, 'From' => $company, 'name' => $collab_user_name, 'Agent_Signature' => $agentsign], function ($message) use ($collab_email, $collab_user_name, $ticket_number, $ticket_subject, $check_attachment) {
 //                     $message->to($collab_email, $collab_user_name)->subject($ticket_subject . '[#' . $ticket_number . ']');
-// //                    if ($check_attachment == 1) {
-// //                        $size = sizeOf($attachments);
-// //                        for ($i = 0; $i < $size; $i++) {
-// //                            $message->attach($attachments[$i]->getRealPath(), ['as' => $attachments[$i]->getClientOriginalName(), 'mime' => $attachments[$i]->getClientOriginalExtension()]);
-// //                        }
-// //                    }
+                // //                    if ($check_attachment == 1) {
+                // //                        $size = sizeOf($attachments);
+                // //                        for ($i = 0; $i < $size; $i++) {
+                // //                            $message->attach($attachments[$i]->getRealPath(), ['as' => $attachments[$i]->getClientOriginalName(), 'mime' => $attachments[$i]->getClientOriginalExtension()]);
+                // //                        }
+                // //                    }
 //                 }, true);
 
                 try {
@@ -426,11 +426,14 @@ class TicketController extends Controller
             $threads = $thread->where('ticket_id', '=', $ticket_id)->first();
             $threads->title = Input::get('subject');
             $threads->save();
+        } catch (\Exception $ex) {
+            $result = $ex->getMessage();
 
-            return $threads;
-        } catch (\Exception $e) {
-            return $e->getMessage();
+            return response()->json(compact('result'), 500);
         }
+        $result = ['success' => 'Edited successfully'];
+
+        return response()->json(compact('result'));
     }
 
     /**
@@ -713,6 +716,7 @@ class TicketController extends Controller
             return $collab;
         } catch (\Exception $ex) {
             return $ex->getMessage();
+
             throw new \Exception('get collaborator for ticket fails');
         }
     }

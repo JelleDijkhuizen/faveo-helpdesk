@@ -120,6 +120,7 @@ class SettingsController extends Controller
         $widget = $widgets->where('id', '=', $id)->first();
         $widget->title = $request->title;
         $widget->value = $request->content;
+
         try {
             $widget->save();
 
@@ -198,6 +199,7 @@ class SettingsController extends Controller
         $widget = $widgets->where('id', '=', $id)->first();
         $widget->title = $request->title;
         $widget->value = $request->content;
+
         try {
             $widget->save();
 
@@ -234,6 +236,7 @@ class SettingsController extends Controller
         $data->name = $request->input('name');
         $data->email = $request->input('email');
         $data->password = Crypt::encrypt($request->input('password'));
+
         try {
             $data->save();
 
@@ -257,6 +260,7 @@ class SettingsController extends Controller
         $pass = $request->input('password');
         $password = Crypt::encrypt($pass);
         $settings->password = $password;
+
         try {
             $settings->save();
         } catch (Exception $e) {
@@ -270,6 +274,7 @@ class SettingsController extends Controller
             $settings->logo = $fileName;
             $settings->save();
         }
+
         try {
             $settings->fill($request->except('logo', 'password'))->save();
 
@@ -364,6 +369,7 @@ class SettingsController extends Controller
     public function PostPlugins(Request $request)
     {
         $this->validate($request, ['plugin' => 'required|mimes:application/zip,zip,Zip']);
+
         try {
             if (!extension_loaded('zip')) {
                 throw new Exception('Please enable zip extension in your php');
@@ -408,7 +414,7 @@ class SettingsController extends Controller
                         $app = base_path().DIRECTORY_SEPARATOR.'config'.DIRECTORY_SEPARATOR.'app.php';
                         chmod($app, 0644);
                         $str = "\n\n\t\t\t'App\\Plugins\\$filename"."\\ServiceProvider',";
-                        $line_i_am_looking_for = 185;
+                        $line_i_am_looking_for = 190;
                         $lines = file($app, FILE_IGNORE_NEW_LINES);
                         $lines[$line_i_am_looking_for] = $str;
                         file_put_contents($app, implode("\n", $lines));
@@ -580,7 +586,7 @@ class SettingsController extends Controller
         if (!$plug) {
             $app = base_path().DIRECTORY_SEPARATOR.'config'.DIRECTORY_SEPARATOR.'app.php';
             $str = "\n'App\\Plugins\\$slug"."\\ServiceProvider',";
-            $line_i_am_looking_for = 185;
+            $line_i_am_looking_for = 190;
             $lines = file($app, FILE_IGNORE_NEW_LINES);
             $lines[$line_i_am_looking_for] = $str;
             file_put_contents($app, implode("\n", $lines));
@@ -594,7 +600,7 @@ class SettingsController extends Controller
 
             $app = base_path().DIRECTORY_SEPARATOR.'config'.DIRECTORY_SEPARATOR.'app.php';
             $str = "\n'App\\Plugins\\$slug"."\\ServiceProvider',";
-            $line_i_am_looking_for = 185;
+            $line_i_am_looking_for = 190;
             $lines = file($app, FILE_IGNORE_NEW_LINES);
             $lines[$line_i_am_looking_for] = $str;
             file_put_contents($app, implode("\n", $lines));
