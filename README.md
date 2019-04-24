@@ -1,8 +1,16 @@
-Faveo Helpdesk Community
-========
-<br><img src="https://travis-ci.org/ladybirdweb/faveo-helpdesk.svg?branch=master">&nbsp;<img src="https://img.shields.io/badge/License-OSL-blue.svg">&nbsp;<a href="https://gitter.im/ladybirdweb/faveo-helpdesk" target="_blank"><img src="https://badges.gitter.im/ladybirdweb/faveo-helpdesk.svg"></a>&nbsp;<a href="https://styleci.io/repos/34716238"><img src="https://styleci.io/repos/34716238/shield" alt="StyleCI" height="19px"></a>&nbsp;<a href="http://squizlabs.github.io/PHP_CodeSniffer/analysis/ladybirdweb/faveo-helpdesk/index.html" target="_blank"><img src="http://squizlabs.github.io/PHP_CodeSniffer/analysis/ladybirdweb/faveo-helpdesk/grade.svg" height="20px"></a>&nbsp;<a href="https://scrutinizer-ci.com/g/ladybirdweb/faveo-helpdesk/?branch=master" target="_blank"><img src="https://scrutinizer-ci.com/g/mverma16/faveo-helpdesk/badges/quality-score.png?b=master" height="20px"></a></br>
+```
 
-#### :new: Faveo Helpdesk Community [v1.10-BETA](https://github.com/ladybirdweb/faveo-helpdesk/releases/tag/v1.10.0-BETA) is out. Click [here](https://github.com/ladybirdweb/faveo-helpdesk/archive/v1.10.0-BETA.zip) to download it now.
+                 ______                      _    _      _           _           _    
+                |  ____|                    | |  | |    | |         | |         | |   
+                | |__ __ ___   _____  ___   | |__| | ___| |_ __   __| | ___  ___| | __
+                |  __/ _` \ \ / / _ \/ _ \  |  __  |/ _ \ | '_ \ / _` |/ _ \/ __| |/ /
+                | | | (_| |\ V /  __/ (_) | | |  | |  __/ | |_) | (_| |  __/\__ \   < 
+                |_|  \__,_| \_/ \___|\___/  |_|  |_|\___|_| .__/ \__,_|\___||___/_|\_\
+                                                          | |                         
+                                                          |_|                         
+             
+```
+<br><img src="https://travis-ci.org/ladybirdweb/faveo-helpdesk.svg?branch=master">&nbsp;<img src="https://img.shields.io/badge/License-OSL-blue.svg">&nbsp;<a href="https://gitter.im/ladybirdweb/faveo-helpdesk" target="_blank"><img src="https://badges.gitter.im/ladybirdweb/faveo-helpdesk.svg"></a>&nbsp;<a href="https://styleci.io/repos/34716238"><img src="https://styleci.io/repos/34716238/shield" alt="StyleCI" height="19px"></a>&nbsp;<a href="http://squizlabs.github.io/PHP_CodeSniffer/analysis/ladybirdweb/faveo-helpdesk/index.html" target="_blank"><img src="http://squizlabs.github.io/PHP_CodeSniffer/analysis/ladybirdweb/faveo-helpdesk/grade.svg" height="20px"></a>&nbsp;<a href="https://scrutinizer-ci.com/g/ladybirdweb/faveo-helpdesk/?branch=master" target="_blank"><img src="https://scrutinizer-ci.com/g/mverma16/faveo-helpdesk/badges/quality-score.png?b=master" height="20px"></a></br>
 
 Faveo Helpdesk provides Businesses with an automated Helpdesk system to manage customer support. 
 
@@ -17,19 +25,19 @@ Flavors of Faveo
   * Faveo Community Edition – Free, Open source edition
   * Faveo Pro Edition – Paid version with many advance features and integrations
   * Faveo Service Desk - Paid version for IT Assest management
-  
+
 Faveo Documentation
 --------------------------
-  * <a href="http://www.ladybirdweb.com/support/knowledgebase" target="_blank">Faveo user Manual</a>
-  * <a href="https://docs.google.com/document/d/1-ZQ9pueqBNPSD-FZ24sLO_2fgoifKLorN_ocCEYZ1hM/" target="_blank">Faveo API Documentation</a>
-  * <a href="https://docs.google.com/document/d/1pXpsQKcTyX5x6H4xA8unYxd5Duw2k94xt7wevTdoF_E/" target="_blank">Faveo Event List</a>
-  * <a href="https://docs.google.com/document/d/1PGcpB19Vr42rM_DrCzC3snujzEL8N9Ocy0yewfPNWqU/" target="_blank">Faveo Plugin creation guide</a>
+  * <a href="https://github.com/ladybirdweb/faveo-helpdesk/wiki" target="_blank">Faveo user Manual</a>
+  * <a href="https://github.com/ladybirdweb/faveo-helpdesk/wiki/API-Documentation" target="_blank">Faveo API Documentation</a>
+  * <a href="https://github.com/ladybirdweb/faveo-helpdesk/wiki/Faveo-Event-List" target="_blank">Faveo Event List</a>
+  * <a href="https://github.com/ladybirdweb/faveo-helpdesk/wiki/Faveo-Plugin-creation-guide" target="_blank">Faveo Plugin creation guide</a>
 
 Requirements
 --------------------------
 To run Faveo your host just needs a couple of things:
 
-  * PHP Version: 5.6+
+  * PHP Version: 7.1+
   * Database: MySQL 5.0+
   * Web Server: Apache / IIS / Nginx
   * PHP Extensions: Imap, Mbstring, Mcrypt, OpenSSL, PDO, Tokenizer, XML, Zip
@@ -63,8 +71,9 @@ Helps verify whether your server can run Faveo or not.
 
 Faveo Community
 --------------------------
-Join Faveo discussion group and stay tuned to latest updates. 
-<a href="https://www.linkedin.com/groups/8429668" target="_blank">Join here</a>
+Join Faveo discussion group and stay tuned to latest updates.<br/>
+<li><a href="https://www.linkedin.com/groups/8429668" target="_blank">Join us on LinkedIn</a></li>
+<li><a href="https://join.slack.com/t/faveocommunity/shared_invite/enQtNDU0NTcxNTA0ODIwLTAzN2VkNDhjMDFmNGJmNmUwYTkxYzE4OGI3ZDUyZGQ2ZDY5NjU2YmY4ZjU3YWNlNTA3N2JkOTk1ZmNiM2ZlY2U" target="_blank">Join us on Slack</a></li>
 
 Support the community edition
 --------------------------
@@ -78,6 +87,12 @@ We are following Laravel <a href="https://laravel.com/docs/5.2/localization">loc
 Contributing
 --------------------------
 Create your own fork of Faveo master repositoray and use <a href="https://github.com/nvie/gitflow">git-flow</a> to create a new feature. Once the feature is published in your fork, send a pull request to begin the conversation of integrating your new feature into Faveo. Please see the <a href="https://github.com/ladybirdweb/faveo-helpdesk/blob/master/CONTRIBUTING.md">contributing guidelines</a> before sending pull requests.
+
+Error Reporting
+--------------------------
+Faveo uses [Bugsnag](https://www.bugsnag.com/) to monitor application stability in production enviroment. It helps us to provide bug fixes and feature updates after analyzing the logs and crash reports for the application. **If you are customizing the application under development environment, we request you to disable this error reporting.** It will allow us to ignore the errors occurred during your development cycle and we can focus more on the exceptions/bugs occuring in live system of other users of Faveo community. It can be easily disabled from "Error logs and debugging" option in admin panel or by updating your app environment to development in `.env`.
+
+You can still report the issues on our [Github Issue page](https://github.com/ladybirdweb/faveo-helpdesk/issues) by providing proper information about the changes you are trying to implement. We assure you that Faveo community will help you and your customization can be a part of Faveo application if it follows our contributing guidelines.
 
 Help
 --------------------------

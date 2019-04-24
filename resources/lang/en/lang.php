@@ -51,7 +51,6 @@ return [
      'password_confirmation'                 => 'Password confirmation',
     'woops'                                  => 'Whoops!',
     'theirisproblem'                         => 'There were some problems with your input.',
-    'login'                                  => 'Login',
     'e-mail'                                 => 'Email',
     'reg_new_member'                         => 'Register a new membership',
     'this_account_is_currently_inactive'     => 'This account is currently inactive!',
@@ -163,7 +162,7 @@ return [
     'email_deleted_sucessfully'                                                        => 'Email deleted sucessfully',
     'email_can_not_delete'                                                             => 'Email can not delete',
     'outgoing_email_failed'                                                            => 'Outgoing email failed',
-    'system-email-not-configured'                                                      => 'We are unable to process email request as the system has no configured email for sending mails. Please contact and report system admin.',
+    'system-email-not-configured'                                                      => 'System could not send emails to users as it does not have the email configured to send outgoing mails. Please contact and report system admin.',
     /*
       |--------------------------------------
       |  Ban Emails Create Page
@@ -171,7 +170,6 @@ return [
      */
     'ban_lists'                        => 'Ban lists',
     'ban_email'                        => 'Ban email',
-    'banlists'                         => 'Ban lists',
     'ban_status'                       => 'Ban status',
     'list_of_banned_emails'            => 'List of banned emails',
     'edit_banned_email'                => 'Edit banned email',
@@ -757,7 +755,6 @@ return [
     'edit'               => 'Edit',
     'departments'        => 'Departments',
     'groups'             => 'Groups',
-    'select_a_time_zone' => 'Select a time zone',
     'time_zones'         => 'Time zones',
     /*
       |--------------------------------------
@@ -828,7 +825,6 @@ return [
     'the_associated_helptopic_has_been_deactivated'    => 'The associated helptopic has been deactivated',
     'department_deleted_sucessfully'                   => 'Department deleted successfully',
     'department_can_not_delete'                        => 'Department can not be deleted',
-    'select_a_department'                              => 'Select a department',
     'make-default-department'                          => 'Make system\'s default department',
     /*
       |--------------------------------------
@@ -886,6 +882,7 @@ return [
     'group_deleted_successfully'                                                             => 'Group deleted successfully',
     'group_cannot_delete'                                                                    => 'Group cannot delete',
     'failed_to_load_the_page'                                                                => 'Failed to load the page',
+    'list_of_groups'                                                                         => 'List of groups',
     /*
       |--------------------------------------
       |  SMTP Page
@@ -1164,6 +1161,7 @@ return [
     'copyright'           => 'Copyright',
     'all_rights_reserved' => 'All rights reserved',
     'powered_by'          => 'Powered by',
+    'version'             => 'Version',
     /*
       |------------------------------------------------
       |Guest-User Page
@@ -1360,7 +1358,6 @@ return [
     'post_comment'                                                                     => 'Post comment',
     'plugin'                                                                           => 'Plugin',
     'edit_profile'                                                                     => 'Edit profile',
-    'you_are_here'                                                                     => 'You are here',
     'Send'                                                                             => 'SEND',
     'no_article'                                                                       => 'No article',
     'profile_settings'                                                                 => 'Profile settings',
@@ -1568,7 +1565,7 @@ return [
      'created-at'                   => 'Created at',
      'or'                           => 'OR',
      'activate'                     => 'Activate',
-     'system-email-not-configured'  => 'We are unable to process email request as the system has no configured email for sending mails. Please contact and report system admin.',
+     'system-email-not-configured'  => 'System could not send emails to users as it does not have the email configured to send outgoing mails. Please contact and report system admin.',
      'assign-ticket'                => 'Assign tickets',
      'can-not-inactive-group'       => 'Can not make the group inactive as it has agents assigned in it. Please assign those agents to another group and try again.',
      'internal-note-has-been-added' => 'Internal note added to the ticket',
@@ -1591,9 +1588,60 @@ return [
      'banned-users'        => 'Banned users',
      'inactive-users'      => 'Inactive users',
      'all-users'           => 'All users',
-     'search'              => 'Search...',
      //update 21-12-2016
      'selected-user-is-already-the-owner' => 'Selected user is already the owner of this ticket.',
      //updated 15-5-2017
      'session-expired'     => 'Session expired or invalid, please try again.',
+
+    //update since v1.10
+    'your_helpdesk_is_ready'                       => 'Your Helpdesk is Ready!',
+    'all_right_sparky_you_have_made_it'            => 'All right, sparky! You’ve made it through the installation.',
+    'next_step'                                    => 'Next Step',
+    'login_to_faveo'                               => 'Login to Faveo',
+    'learn_more'                                   => 'Learn More',
+    'video_walk_through'                           => 'Video walk through',
+    'email_support'                                => 'Email Support',
+    'not-answered'                                 => 'Not answered',
+    'default-fallback'                             => 'Fallback language',
+    'system-language'                              => 'System\'s default language',
+    'set_as_sys_lang'                              => 'Make default',
+    'filtered-results'                             => 'Filtered results',
+    'methon_not_allowed'                           => 'Method not allowed',
+    'confirm-to-proceed'                           => 'Are you sure?',
+    'change-ticket-status-to'                      => 'Change status of tickets to ',
+    'your-ticket-status-changed'                   => 'Your ticket\'s status has been changed.',
+    'reload-be-patient-message'                    => 'Please be patient we are reloading the page.',
+    'status-changed-successfully'                  => 'Status changed successfully.',
+    'system-outgoing-incoming-mail-not-configured' => 'You have not configured system mail. Faveo can\'t fetch tickets from mail or send mail to users without it.',
+    'confihure-the-mail-now'                       => 'Click here to configure the mail.',
+    'system-mail-not-configured-agent-message'     => 'System incoming and outgoing email settings are not configured. Please contct your system\'s admin and report the problem.',
+    'ticket-assigned-successfully'                 => 'Selected tickets have been assigned sucessfully.',
+    'canned_response_deleted'                      => 'Canned response deleted successfully',
+    'no-dummy-data'                                => 'Your system is in production, we could not find dummy data installed in your system.',
+    'dummy_data_installation_message'              => 'You are using Faveo with dummy data, which should be used only for testing purpose. Your system will not fetch or send any mail as dummy data has minimal configuration settings. We recommend not to feed any live data in the system till you are testing the system. Once you are done with testing clear all dummy data and configure system settings to get started with the system.',
+    'clear-dummy-data-agent-message'               => 'Your Faveo system has been installed with dummy data  which should be used only for testing purpose. Your system will not fetch or send any mail as dummy data has minimal configuration settings. We recommend not to feed any live data in the system till you are testing the system. Once you are done with testing contact your system admin to clean dummy data and configure system settings.',
+    'clear-dummy-data'                             => 'to clear dummy data.',
+    'delete_dummy_data'                            => 'Clean dummy data',
+    'plugin-with-dummy-data-error-message'         => 'You\'ve installed Faveo with dummy data for testing. Plugins can only be used in live/production mode. If you are done with testing clear dummy data and start using Faveo in live/production mode.',
+    'clean-data-box-title'                         => 'Cleaning Dummy data will perform following actions',
+    'clean-dummy-ticket-conversation'              => 'Clean all dummy tickets and their conversations.',
+    'clean-dummy-notification'                     => 'Clean all dummy notifications.',
+    'clean-dummy-users'                            => 'Clean all dummy users and their data.',
+    'clean-other-data'                             => 'Clean dummy departments, teams, labels, tags etc.',
+    'clean-user-created-data'                      => 'Clean all data created during testing with dummy data.',
+    'clean-data-btn'                               => 'Clear data',
+    'clean-confirm'                                => 'Yes I want to clean dummy data',
+    'do-not-refresh'                               => '(Please do not use "Refresh" or "Back" button)',
+    'cleaning-in-progress'                         => 'Cleaning in progress, please wait while we are cleaning your database',
+    'cleaning-database'                            => 'Cleaning dummy data from database.',
+    'native-name'                                  => 'Native name',
+    'choose'                                       => 'Choose',
+    'going-overdue-today'                          => 'This ticket will become overdue today.',
+    'ticket_has_attachments'                       => 'This ticket contains attachment(s)',
+    'is_overdue'                                   => 'This ticket is marked as overdue',
+    'ticket_has_collaborator'                      => 'This ticket has collaborator(s)',
+    'ticket_created_source'                        => 'This ticket is created via :source',
+    'ticket-has-x-priority'                        => 'This ticket has :priority priority',
+    'clean-forever'                                => 'delete permanently',
+    'mail-sent-to-job-for-process'                 => 'Mail has been sent to job for process, it will appear in your mailbox once it gets processed by your selected queue service. If you don\'t recieve the mail check logs for errors or warnings.',
 ];
